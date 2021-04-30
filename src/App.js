@@ -2,6 +2,7 @@ import { Component } from "react";
 import React from "react";
 import Todo from "./components/Todo/Todo";
 import "./App.css";
+import { hot } from 'react-hot-loader/root';
 
 class App extends Component {
   constructor() {
@@ -131,11 +132,11 @@ class App extends Component {
         </div>
 
         {this.state.items.length === 0 && (
-          <h1 id="add-todo-text">Add what do you want to do</h1>
+          <h1 id="add-todo-text">Add what you want to do</h1>
         )}
       </React.Fragment>
     );
   }
 }
 
-export default App;
+export default hot(App);
