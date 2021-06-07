@@ -3,6 +3,7 @@ import React from "react";
 import Todo from "./components/Todo/Todo";
 import "./App.css";
 import { hot } from 'react-hot-loader/root';
+import MetaTags from 'react-meta-tags';
 
 class App extends Component {
   constructor() {
@@ -84,6 +85,16 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+
+          <MetaTags>
+            <title>Page title - ReactJS todo list app</title>
+            <meta name="description" content="Some description." />
+            <meta property="og:title" content="Open Graph protocol title" />
+            <meta property="og:image" content="../public/logo512.png" />
+            <meta property="og:description" content="Open Graph protocol description" />
+          </MetaTags>
+
+
         <div id="main">
           <div id='header'>
             <h1>ReactJS todo list app</h1>
